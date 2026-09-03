@@ -2,7 +2,7 @@ This repository contains a Kalman filter implementation for smoothing GPS-derive
 GPS elevation measurements can contain considerable noise and short-term fluctuations. These variations may not represent actual changes in ground elevation and can affect the quality of a Digital Elevation Model (DEM) generated from the collected points.
 The Kalman filter is therefore applied to reduce measurement noise and produce a smoother elevation profile while retaining the underlying variation in the terrain.
 
-# Why use a Kalman filter?
+## Why use a Kalman filter?
 
 GPS-based elevation measurements are affected by measurement uncertainty. Even when a participant is moving over relatively uniform terrain, the recorded elevation can fluctuate between consecutive observations.
 For example:
@@ -13,7 +13,7 @@ Filtered elevation:
 The purpose of the filter is not to remove genuine changes in elevation, but to reduce rapid fluctuations that are likely to be caused by GPS measurement noise.
 The resulting elevation data can then be used as input points for subsequent DEM generation.
 
-# How the Kalman filter works?
+## How the Kalman filter works?
 
 The implementation treats elevation as a time-varying variable and estimates the most likely elevation at each observation.
 For each measurement, the filter performs two main steps:
